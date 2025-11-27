@@ -87,8 +87,8 @@ public class Distribuidor {
 
             // IPs e portas hard coded
             String[] servidores = {
-                    "127.0.0.1:12345",
-                    "127.0.0.1:12346"
+                    "localhost:12345",
+                    "localhost:12346"
             };
 
             // Criação das conexões persistentes
@@ -176,7 +176,7 @@ public class Distribuidor {
             System.out.println("Tamanho do vetor: " + TAM);
             System.out.println("Número de receptores: " + conexoes.size());
             System.out.println("Tempo de ordenação distribuída: " + tempoDistribuido + " ms");
-            System.out.println("Tempo médio por elemento: " + String.format("%.6f", tempoDistribuido / (double)TAM) + " ms");
+            System.out.println(String.format("Tempo médio por elemento: %.6f ms", tempoDistribuido / (double)TAM));
 
         } catch (InputMismatchException e) {
             System.err.println("[ERRO] Entrada inválida. Por favor, digite um número inteiro.");
